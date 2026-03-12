@@ -1,3 +1,7 @@
+html{
+    font-family: 'Pretendard',sans-serif;
+    font-size:var(--basic-font-pc);
+}
 h1{
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);
@@ -22,4 +26,37 @@ p{
 }
 .de{
     font-size: var(--fs-det);
+}
+.common-frame{
+    width:1440px;
+    margin:0 auto;
+}
+.sns{
+    display: flex;
+    gap:0.5rem;
+}
+.sns img{
+    height: 1.2rem;
+}
+.mo{
+    display: none;
+}
+@media (max-width:1440px){
+    html{
+        font-size:var(--basic-font-tab);
+    }
+    .common-frame{
+        width:auto;
+        margin:0 2rem;
+    }
+}
+@media (max-width:768px){
+    .mo{display: block;}
+    html{
+        font-size: var(--basic-font-mobile);
+    }
+    .common-frame{
+        width:auto;
+        margin:0 1rem;
+    }
 }

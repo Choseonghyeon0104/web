@@ -4,19 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>몽글식탁</title>
+    <link rel="stylesheet" href="./style/font.css">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/system.css">
     <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <script src="./script/header.js"></script>
 </head>
 <body>
-    <header>
-        <div class="common-frame">
-            <div class="logo">
-                <a href="#">
-                    <img src="./img/logo.svg" alt="몽글식탁 로고">
-                </a>
+    <div class="menu-smart-hidden">
+        <div class="menu-top">
+            <div class="common-frame">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="상단로고">
+                    </a>
+                </div>
+                <span class="btn-close"><img src="./img/btn-close.svg" alt="전체메뉴닫기버튼"></span>
             </div>
-            <ul class="gnb"></ul>
+        </div>
+        <div class="menu-content">
+            <div class="common-frame">
+                <ul class="gnb-smart">
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">브랜드</a>
+                        <ul>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">원재료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">멍메뉴</a>
+                        <ul>
+                            <li><a href="#">전체보기</a></li>
+                            <li><a href="#">주식(화식/건식)</a></li>
+                            <li><a href="#">수제 간식</a></li>
+                            <li><a href="#">영양제/기능성</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">냥메뉴</a>
+                        <ul>
+                            <li><a href="#">전체보기</a></li>
+                            <li><a href="#">주식 사료</a></li>
+                            <li><a href="#">영양 간식</a></li>
+                            <li><a href="#">캣잎/기능성 케어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">정기구독</a>
+                        <ul>
+                            <li><a href="#">구독 안내</a></li>
+                            <li><a href="#">관리하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">커뮤니티</a>
+                        <ul> 
+                            <li><a href="#">리뷰</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">고객지원</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ/문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-sns common-frame">
             <ul class="sns">
                 <li>
                     <a href="#" target="_blank">
@@ -35,6 +100,90 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <header>
+        <div class="common-frame">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="몽글식탁 로고">
+                </a>
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#">브랜드</a>
+                    <ul>
+                        <li><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">원재료</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">멍메뉴</a>
+                    <ul>
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">주식(화식/건식)</a></li>
+                        <li><a href="#">수제 간식</a></li>
+                        <li><a href="#">영양제/기능성</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">냥메뉴</a>
+                    <ul>
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">주식 사료</a></li>
+                        <li><a href="#">영양 간식</a></li>
+                        <li><a href="#">캣잎/기능성 케어</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">정기구독</a>
+                    <ul>
+                        <li><a href="#">구독 안내</a></li>
+                        <li><a href="#">관리하기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul> 
+                        <li><a href="#">리뷰</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객지원</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ/문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+             <ul class="sns">
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-instagram.svg" alt="몽글식탁 인스타 바로가기">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-facebook.svg" alt="몽글식탁 페이스북 바로가기">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-youtube.svg" alt="몽글식탁 유튜브 바로가기">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
+    <div class="header-smart">
+        <div class="common-frame">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="상단로고">
+                </a>
+            </div>
+            <span class="btn-menu"><img src="./img/btn-menu.svg" alt="전체메뉴버튼"></span>
+        </div>
+    </div>
 </body>
 </html>
