@@ -41,7 +41,19 @@ p{
 .mo{
     display: none;
 }
+.tab{
+    display: none;
+}
+.pc{
+    display: block;
+}
+main{
+    margin-top: 100px;
+}
 @media (max-width:1440px){
+    main{
+        margin-top: 5rem;
+    }
     html{
         font-size:var(--basic-font-tab);
     }
@@ -49,9 +61,12 @@ p{
         width:auto;
         margin:0 2rem;
     }
+    .mo{display: none;}
+    .tab{display: block;}
+    .pc{display: none;}
 }
 @media (max-width:768px){
-    .mo{display: block;}
+    /* .mo{display: block;} */
     html{
         font-size: var(--basic-font-mobile);
     }
@@ -59,4 +74,7 @@ p{
         width:auto;
         margin:0 1rem;
     }
+    .mo{display: block;}
+    .tab{display: none;}
+    .pc{display: none;}
 }

@@ -6,6 +6,12 @@ header{
     overflow: hidden;
     transition:all 0.4s ease 0s;
     box-shadow: 0 0 10px #ddd;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    z-index: 1000;
     /* border-bottom: 1px solid var(--pm-color-7); */
 }
 header:hover{
@@ -73,6 +79,12 @@ header .sns li{
     .header-smart{
         display: block;
         border-bottom: 1px solid var(--pm-color-7);
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
     }
     .header-smart .common-frame{
         display: flex;
