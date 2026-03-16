@@ -31,9 +31,171 @@
 .pagination>span.swiper-pagination-bullet-active {
     background: var(--pm-color-7);
 }
+
+.story{
+    /* border: 1px solid red; */
+    margin: var(--space-3x-large) 0;
+}
+.story h1{
+    margin-bottom: var(--space-2x-large);
+    text-transform: uppercase;
+}
+.story-frame h2{
+    margin-bottom: var(--space-normal);
+}
+.story-frame h4{
+    margin-bottom: var(--space-large);
+}
+.story-frame h4+p{
+    margin-bottom: var(--space-normal);
+}
+.story-frame p:nth-of-type(2){
+    margin-bottom: var(--space-large);
+}
+
+.story-frame{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 9.4rem; */
+}
+.img-story img{
+    aspect-ratio: 588/370;
+    object-fit: cover;
+}
+.philo{
+    margin-top: 4rem;
+}
+.philo-list{
+    display: flex;
+    gap: var(--space-normal);
+}
+.philo-list>li{
+    flex: 1;
+    border: 3px solid var(--point-color);
+    padding: 1.5rem;
+    border-radius: var(--space-large);
+}
+.philo-list>li:nth-of-type(2){
+    border: 3px solid var(--pm-color-7);
+}
+.philo-list>li h3{
+    margin-bottom: var(--space-large);
+}
+.philo-list>li p.fwb{
+    margin-bottom: var(--space-normal);
+}
+
+.menu-frame h1{
+    margin-bottom: var(--space-normal);
+}
+.menu-frame h1+h4{
+    margin-bottom: var(--space-large);
+}
+.menu-frame h1+h4+p{
+    margin-bottom: var(--space-x-large);
+}
+.signature-menu-slider figure{
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.signature-menu-slider figure+h4{
+    margin-bottom: var(--space-normal);
+}
+.signature-menu-slider figure img{
+    border-radius: 1rem;
+    transition: all 0.5s ease 0s;
+}
+.signature-menu-slider figure img:hover{
+    transform: scale(1.2);
+}
+.menu-frame{
+    margin-bottom: var(--space-3x-large);
+}
+.best-menu-slider h4{
+    margin-top: 1.5rem;
+    margin-bottom: var(--space-normal);
+}
+
+.franchise{
+    background: 
+    linear-gradient(30deg,rgba(0, 0, 0, 0.400),rgba(0, 0, 0, 0.400)),
+    url(../img/bg-franchise.jpg) no-repeat 50% 50% / cover;
+    height: 815px;
+    color: #fff;
+    padding: var(--space-3x-large) 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.franchise h1{
+    margin-bottom: var(--space-small);
+}
+.franchise h1+p{
+    margin-bottom: var(--space-x-large);
+}
+.franchise h3{
+    margin-top: 9rem;
+    margin-bottom: var(--space-x-large);
+}
+.why{
+    display: flex;
+    gap:var(--space-normal);
+    text-align: left;
+}
+.why li{
+    padding: 20px;
+    background-color: rgba(252, 220, 198, 0.400);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    /* 배경색이 투명해야만 적용이 된다. */
+}
+.why li p:first-of-type{
+    margin-bottom: 0.5rem;
+}
+
+
+
 @media (max-width:1440px){
     .hero-slider{
     width: 100%;
     height: auto;
     }
+    .img-story img{
+        aspect-ratio: 305/337;
+    }
+    .story-frame{
+    display: flex;
+    gap: 2.72rem;
+    }
+    .philo-list li{
+        padding: 1.5rem;
+    }
+    .signature-menu-slider figure img:hover{
+    transform: none;
+    }
+    
+
+}
+@media(max-width:768px){
+    .story h1{
+        text-align: center;
+    }
+    .story-frame{
+        flex-direction: column;
+        text-align: center;
+    }
+    .img-story img{
+        aspect-ratio: 374/250;
+    }
+    .philo-list{
+        flex-direction: column;
+    }
+    .philo-list li{
+        padding: 2rem;
+    }
+    .why{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
 }

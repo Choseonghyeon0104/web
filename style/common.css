@@ -21,6 +21,9 @@ h4{
 p{
     line-height: 1.4;
 }
+.fwr{font-weight: var(--fw-reg);}
+.fwm{font-weight: var(--fw-med);}
+.fwb{font-weight: var(--fw-bold);}
 .b2{
     font-size: var(--fs-bd2);
 }
@@ -50,6 +53,19 @@ p{
 main{
     margin-top: 100px;
 }
+.btn-style{
+    display: inline-flex;
+    padding: var(--space-x-small) 1.5rem ;
+    border-radius: var(--space-3x-large);
+    border: 1px solid #fff;
+    transition: all 0.5s ease 0s;
+}
+.btn-style:hover{
+    background-color: var(--pm-color-7);
+    border: 1px solid var(--pm-color-7);
+}
+
+
 @media (max-width:1440px){
     main{
         margin-top: 5rem;
