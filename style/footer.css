@@ -1,0 +1,131 @@
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: var(--space-x-large) 0;
+    line-height: 1.4;
+}
+.ft1{
+    font-size: var(--fs-bd1);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-large);
+}
+.ft1-1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.ft1-1 .ft-menu-1{
+    font-weight: var(--fw-bold);
+    display: inline-flex;
+    gap: var(--space-normal);
+}
+.ft1 .cinfo-1{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: var(--space-small) var(--space-normal)  ;
+}
+.ft1 .cinfo-1 dt{
+    font-weight: var(--fw-med);
+}
+.ft1 .cinfo-1 dd{
+    font-weight: var(--fw-bold);
+}
+.ft1 .sns-logo{
+    padding: var(--space-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sns-menu{
+    font-size: var(--fs-bd2);
+    font-weight: var(--fw-reg);
+    display: flex;
+    gap: var(--space-large);
+}
+.sns-menu .sns{
+    display: flex;
+    gap: var(--space-normal);
+}
+.ft2{
+    /* border: 1px solid red; */
+    margin-bottom: var(--space-large);
+    font-size: var(--fs-bd2);
+}
+.f-gnb{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-large);
+}
+.f-gnb>li>a{
+    display: flex;
+    width: 6rem;
+    height: 2.5rem;
+    align-items: center;
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-small);
+}
+.f-gnb>li>ul{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+}
+.ft3{
+    font-size: var(--fs-bd2);
+    font-weight: var(--fw-bold);
+    text-align: center;
+}
+.tab-footer{display: none;}
+.mobile-footer{display: none;}
+
+@media(max-width:1440px){
+    .pc-footer{
+        display: none;
+    }
+    .tab-footer{display: block;}
+    .ft1{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .ft1-1{gap: var(--space-large);}
+    .cinfo-1{
+        justify-content: start;
+    }
+    .ft-logo{
+        display: block;
+        margin: 0 auto;
+
+    }
+    .sns-menu{
+        margin: 0 auto;
+        gap: var(--space-large);
+        line-height: 0;
+    }
+    .sns-logo .sns img{
+        height: 1.2rem;
+    }
+    .sns-logo{
+        margin-bottom: 1.5rem;
+    }
+}
+@media(max-width:768px){
+    .tab-footer{display: none;}
+    .mobile-footer{display: block;}
+    /* 모바일 푸터, html이미지 수정하기 */
+    .ft-menu{
+        margin:0 auto;
+    }
+    .ft1 .cinfo-1{
+        grid-template-columns: repeat(2,auto);
+        justify-content: center;
+        margin-bottom: var(--space-large);
+    }
+    .ft1-1 {
+        gap: 1.5rem;
+    }
+    .ft1 .sns-logo {
+        gap: var(--space-normal);
+    }
+    
+
+}
