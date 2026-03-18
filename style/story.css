@@ -9,6 +9,61 @@
     color: #fff;
     height: 100%;
 }
+.core{
+    margin-top: var(--space-3x-large);
+}
+.core .common-frame>p:first-of-type{
+    font-size: var(--fs-bd1);
+    margin-bottom: var(--space-normal);
+    text-align: center;
+}
+.core h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: var(--space-normal);
+}
+.core h1+p{
+    font-size: var(--fs-bd1);
+    text-align: center;
+    margin-bottom: var(--space-x-large);
+}
+.core-card>li{
+    border: 1px solid #CFCFCF;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.core-card h4{
+    margin-bottom: var(--space-small);
+}
+.core-card h4+p{
+    margin-bottom: var(--space-normal);
+}
+.core-card p:nth-of-type(2){
+    display: block;
+    height: 2.8rem;
+    margin-bottom: var(--space-normal);
+}
+.core-card figure{
+    margin-bottom: var(--space-normal);
+}
+.core-card>li ul{
+    margin-bottom: var(--space-normal);
+}
+
+.core-check-list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+}
+.core-check-list>li{
+    display: flex;
+    gap: var(--space-small);
+    align-items: flex-start;
+}
+
 
 @media(max-width:1440px){
     .sub-banner{
