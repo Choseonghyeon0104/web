@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세페이지</title>
+
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <script src="./script/header.js"></script>
+    <script src="./script/heart.js"></script>
+    <script src="./script/toWon.js"></script>
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <script src="./script/listArray.js"></script>
+    <script src="./script/listControl.js"></script>
+    <link rel="stylesheet" href="./style/detail.css">
+</head>
+<body>
+    <!-- 스마트 기기에서 보이는 메뉴 -->
+    <div class="menu-smart-hidden">
+        <div class="menu-top">
+            <div class="common-frame">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="상단로고">
+                    </a>
+                </div>
+                <span class="btn-close"><img src="./img/btn-close.svg" alt="전체메뉴닫기버튼"></span>
+            </div>
+        </div>
+        <div class="menu-content">
+            <div class="common-frame">
+                <ul class="gnb-smart">
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">브랜드</a>
+                        <ul>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">원재료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">멍메뉴</a>
+                        <ul>
+                            <li><a href="#">전체보기</a></li>
+                            <li><a href="#">주식(화식/건식)</a></li>
+                            <li><a href="#">수제 간식</a></li>
+                            <li><a href="#">영양제/기능성</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">냥메뉴</a>
+                        <ul>
+                            <li><a href="#">전체보기</a></li>
+                            <li><a href="#">주식 사료</a></li>
+                            <li><a href="#">영양 간식</a></li>
+                            <li><a href="#">캣잎/기능성 케어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">정기구독</a>
+                        <ul>
+                            <li><a href="#">구독 안내</a></li>
+                            <li><a href="#">관리하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">커뮤니티</a>
+                        <ul> 
+                            <li><a href="#">리뷰</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="btn-more mo"><img src="./img/btn-more.svg" alt="메뉴 더보기"></span>
+                        <a href="#">고객지원</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ/문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-sns common-frame">
+            <ul class="sns">
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-instagram.svg" alt="몽글식탁 인스타 바로가기">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-facebook.svg" alt="몽글식탁 페이스북 바로가기">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-youtube.svg" alt="몽글식탁 유튜브 바로가기">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- pc용 헤더 -->
+    <header>
+        <div class="common-frame">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="몽글식탁 로고">
+                </a>
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#">브랜드</a>
+                    <ul>
+                        <li><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">원재료</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">멍메뉴</a>
+                    <ul>
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">주식(화식/건식)</a></li>
+                        <li><a href="#">수제 간식</a></li>
+                        <li><a href="#">영양제/기능성</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">냥메뉴</a>
+                    <ul>
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">주식 사료</a></li>
+                        <li><a href="#">영양 간식</a></li>
+                        <li><a href="#">캣잎/기능성 케어</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">정기구독</a>
+                    <ul>
+                        <li><a href="#">구독 안내</a></li>
+                        <li><a href="#">관리하기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul> 
+                        <li><a href="#">리뷰</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객지원</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ/문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+             <ul class="sns">
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-instagram.svg" alt="몽글식탁 인스타 바로가기">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-facebook.svg" alt="몽글식탁 페이스북 바로가기">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./img/sns-youtube.svg" alt="몽글식탁 유튜브 바로가기">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 스마트 기기용 헤더 -->
+    <div class="header-smart">
+        <div class="common-frame">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="상단로고">
+                </a>
+            </div>
+            <span class="btn-menu"><img src="./img/btn-menu.svg" alt="전체메뉴버튼"></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="product1">
+            <div class="common-frame">
+                <figure class="img-pro-thumb">
+                    <img src="./img/list-dog-1-1.png" alt="상품 썸네일 이미지">
+                </figure>
+                <div class="txt-pro">
+                    <h1>그레인프리 데일리 사료</h1>
+                    <p class="fwr">옥수수, 밀 등의 곡물 대신 고품질 단백질과 완두콩, 감자를 사용하여 소화 부담을 획기적으로 줄였습니다. 필수 아미노산과 비타민이 황금 비율로 배합되어 있어 반려견의 면역력 강화와 최상의 컨디션 유지에 도움을 줍니다. 알러지 걱정 없이 매일 안심하고 급여할 수 있는 프리미엄 데일리 식단입니다.</p>
+                    <dl class="price-table">
+                        <dt>판매가</dt>
+                        <dd>28,000원</dd>
+                        <dt>배송비</dt>
+                        <dd>
+                            1,000원
+                            <span>(20,000원 이상 구매시 무료)</span>
+                        </dd>
+                    </dl>
+                    <div class="sell-info">
+                        <div class="fwb">그레인프리 데일리 사료</div>
+                        <div>
+                            <div class="box-number">
+                                <span class="btn-minus">
+                                    <img src="./img/minus.svg" alt="감소 버튼">
+                                </span>
+                                <span class="current-count">1</span>
+                                <span class="btn-plus">
+                                    <img src="./img/plus.svg" alt="증가 버튼">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fwb">3,000원</div>
+                    </div>
+                    <dl class="price-result">
+                        <dt>전체금액</dt>
+                        <dd>29,000원</dd>
+                    </dl>
+                    <ul class="btns-buy">
+                        <li><a href="#"><img src="./img/icn-heart.svg" alt="관심상품 등록버튼"></a></li>
+                        <li><a href="#">장바구니</a></li>
+                        <li><a href="#">구매하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="pc-footer common-frame">
+            <div class="ft1">
+                <div class="ft1-1">
+                    <div class="ft-menu">
+                        <ul class="ft-menu-1">
+                            <li><a href="#">이메일무단수집거부</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li class="ptc"><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="cinfo">
+                        <dl class="cinfo-1">
+                            <dt>상호명</dt>
+                            <dd>몽글식탁</dd>
+                            <dt>사업자등록번호</dt>
+                            <dd>123-45-67890</dd>
+                            <dt>대표자</dt>
+                            <dd>조성현</dd>
+                            <dt>주소</dt>
+                            <dd>서울특별시 강남구 몽글로 123</dd>
+                            <dt>대표번호</dt>
+                            <dd>02-1234-1234</dd>
+                            <dt>이메일</dt>
+                            <dd>help@mongle-siktak.com</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sns-logo">
+                    <div class="ft-logo">
+                        <a href="#"><img src="./img/footer-logo-pc.svg" alt="몽글식탁 하단 로고"></a>
+                    </div>
+                    <div class="sns-menu">
+                        <p>반려동물의 건강한 식탁, 몽글몽글 피어나는 행복</p>
+                        <div class="sns">
+                            <a href="#"><img src="./img/sns-instagram-foot.svg" alt="인스타그램 하단 로고"></a>
+                            <a href="#"><img src="./img/sns-facebook-foot.svg" alt="페이스북 하단 로고"></a>
+                            <a href="#"><img src="./img/sns-youtube-foot.svg" alt="유튜브 하단 로고"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft2">
+                 <ul class="f-gnb">
+                <li>
+                    <a href="#">브랜드</a>
+                    <ul>
+                        <li><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">원재료</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">멍메뉴</a>
+                    <ul>
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">주식(화식/건식)</a></li>
+                        <li><a href="#">수제 간식</a></li>
+                        <li><a href="#">영양제/기능성</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">냥메뉴</a>
+                    <ul>
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">주식 사료</a></li>
+                        <li><a href="#">영양 간식</a></li>
+                        <li><a href="#">캣잎/기능성 케어</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">정기구독</a>
+                    <ul>
+                        <li><a href="#">구독 안내</a></li>
+                        <li><a href="#">관리하기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul> 
+                        <li><a href="#">리뷰</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객지원</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ/문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <div class="ft3">© 2026 Mongle Siktak. All rights reserved. 취업 용도의 포트폴리오 웹사이트입니다.</div>
+        </div>
+        <div class="tab-footer common-frame">
+            <div class="ft1">
+                <div class="ft1-1">
+                    <div class="ft-menu">
+                        <ul class="ft-menu-1">
+                            <li><a href="#">이메일무단수집거부</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li class="ptc"><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="cinfo">
+                        <dl class="cinfo-1">
+                            <dt>상호명</dt>
+                            <dd>몽글식탁</dd>
+                            <dt>사업자등록번호</dt>
+                            <dd>123-45-67890</dd>
+                            <dt>대표자</dt>
+                            <dd>조성현</dd>
+                            <dt>주소</dt>
+                            <dd>서울특별시 강남구 몽글로 123</dd>
+                            <dt>대표번호</dt>
+                            <dd>02-1234-1234</dd>
+                            <dt>이메일</dt>
+                            <dd>help@mongle-siktak.com</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sns-logo">
+                    <div class="ft-logo">
+                        <a href="#"><img src="./img/footer-logo-tab.svg" alt="몽글식탁 하단 로고"></a>
+                    </div>
+                    <div class="sns-menu">
+                        <p>반려동물의 건강한 식탁, 몽글몽글 피어나는 행복</p>
+                        <div class="sns">
+                            <a href="#"><img src="./img/sns-instagram-foot.svg" alt="인스타그램 하단 로고"></a>
+                            <a href="#"><img src="./img/sns-facebook-foot.svg" alt="페이스북 하단 로고"></a>
+                            <a href="#"><img src="./img/sns-youtube-foot.svg" alt="유튜브 하단 로고"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft3">© 2026 Mongle Siktak. All rights reserved. 취업 용도의 포트폴리오 웹사이트입니다.</div>
+        </div>
+         <div class="mobile-footer common-frame">
+            <div class="ft1">
+                <div class="ft1-1">
+                    <div class="ft-menu">
+                        <ul class="ft-menu-1">
+                            <li><a href="#">이메일무단수집거부</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li class="ptc"><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="cinfo">
+                        <dl class="cinfo-1">
+                            <dt>상호명</dt>
+                            <dd>몽글식탁</dd>
+                            <dt>사업자등록번호</dt>
+                            <dd>123-45-67890</dd>
+                            <dt>대표자</dt>
+                            <dd>조성현</dd>
+                            <dt>주소</dt>
+                            <dd>서울특별시 강남구 몽글로 123</dd>
+                            <dt>대표번호</dt>
+                            <dd>02-1234-1234</dd>
+                            <dt>이메일</dt>
+                            <dd>help@mongle-siktak.com</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sns-logo">
+                    <div class="ft-logo">
+                        <a href="#"><img src="./img/footer-logo-tab.svg" alt="몽글식탁 하단 로고"></a>
+                    </div>
+                    <div class="sns-menu">
+                        <p>반려동물의 건강한 식탁, 몽글몽글 피어나는 행복</p>
+                        <div class="sns">
+                            <a href="#"><img src="./img/sns-instagram-foot.svg" alt="인스타그램 하단 로고"></a>
+                            <a href="#"><img src="./img/sns-facebook-foot.svg" alt="페이스북 하단 로고"></a>
+                            <a href="#"><img src="./img/sns-youtube-foot.svg" alt="유튜브 하단 로고"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft3">© 2026 Mongle Siktak. All rights reserved. 취업 용도의 포트폴리오 웹사이트입니다.</div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
