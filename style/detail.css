@@ -112,7 +112,184 @@
 .btns-buy>li:nth-of-type(3) a{
     background-color: var(--point-color);
 }
-@media (max-width:1440px){}
+
+.sticky-menu{
+    display: flex;
+    gap: var(--space-normal);
+    justify-content: center;
+    font-size: var(--fs-bd2);
+    font-weight: var(--fw-bold);
+}
+.sticky-menu>li{
+    flex-shrink: 0;
+}
+.sticky-menu a{
+    display: block;
+    padding: var(--space-small) var(--space-large);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 150px;
+    background-color: #fff;
+}
+.sticky-menu-wrap{
+    overflow-x:auto ;
+    position: sticky;
+    left: 0;
+    top: 5.5rem;
+    margin: var(--space-3x-large) auto var(--space-large);
+    z-index: 1000;
+    padding-bottom: var(--space-2x-large);
+}
+.list-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: var(--space-x-large) var(--space-normal);
+}
+.list-wrap{
+    margin-bottom: var(--space-3x-large);
+}
+.list-grid li figure{
+    margin-bottom: var(--space-normal);
+    aspect-ratio: 1/1;
+    line-height: 0;
+    overflow: hidden;
+}
+.list-grid li:hover figure img{
+    transform: scale(1.1);
+}
+.list-grid li figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease 0s;
+}
+.list-option{
+    margin-bottom: var(--space-small);
+}
+
+.list-grid li h4{
+    margin-bottom: var(--space-small);
+    display: -webkit-box;        
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;       
+	overflow: hidden;            
+	text-overflow: ellipsis; 
+}
+.list-grid li p{
+    margin-bottom: var(--space-large);
+     display: -webkit-box;        
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;       
+	overflow: hidden;            
+	text-overflow: ellipsis; 
+}
+.price{
+    font-size: var(--fs-h2);
+}
+
+.recomd-product h2{
+    margin-bottom: var(--space-x-large);
+    text-align: center;
+}
+.nutri{
+    margin-top: var(--space-3x-large);
+}
+.nutri h2{
+    margin-bottom: var(--space-x-large);
+    text-align: center;
+}
+.nutri-inner{
+    display: flex;
+    gap: var(--space-normal);
+    align-items: flex-end;
+}
+.nutri-inner>div{
+    flex: 1;
+    min-width: 50%;
+}
+.nutri h3{
+    margin-bottom: var(--space-small);
+}
+.nutri h3+p{
+    margin-bottom: var(--space-large);
+}
+.nutri1 table{
+    width: 100%;
+    border-top: 2px solid var(--point-color);
+}
+
+.nutri1 table th{
+    text-align: left;
+    width: 50%;
+    /* border: 1px solid red; */
+    font-weight: var(--fw-reg);
+    padding: var(--space-small) 0;
+}
+.nutri1 table td{
+    padding: var(--space-small) 0;
+}
+.nutri table tr{
+    border-bottom: 1px solid #000;
+}
+.nutri2{
+    text-align: end;
+}
+.review{
+    margin-top: var(--space-3x-large);
+    margin-bottom: var(--space-3x-large);
+}
+.review h2{
+    margin-bottom: var(--space-x-large);
+    text-align: center;
+}
+.rev-con{
+    display: flex;
+    gap: var(--space-normal);
+    padding: var(--space-large);
+    border-bottom: 1px solid #000;
+}
+.rev-user-info{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+}
+.rev-desc{
+    flex:3;
+}
+.rev-desc h4{
+    margin-bottom: var(--space-small);
+}
+.rev-thumnail-list{
+    margin-bottom: var(--space-small);
+    line-height: 0;
+    display: flex;
+    gap:var(--space-normal);
+}
+.rev-thumnail-list>li{
+    flex-shrink: 0;
+}
+.rev-thumnail-list>li img{
+    width: 460px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.rev-thumb-list-wrap{
+    overflow-x:auto;
+}
+
+
+@media (max-width:1440px){
+    .list-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .sticky-menu-wrap{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .rev-thumnail-list>li img{
+        width: 298px;
+    }
+}
 @media (max-width:768px){
     .product1 .common-frame{
         flex-direction: column;
@@ -124,5 +301,26 @@
     }
     .sell-info div:first-of-type{
         grid-column: 1/3;
+    }
+    .sticky-menu{
+        justify-content: flex-start;
+    }
+    .list-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sticky-menu-wrap{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .nutri-inner{
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: var(--space-x-large);
+    }
+    .rev-thumnail-list>li img{
+        width: 250px;
+    }
+    .rev-con{
+        flex-direction: column;
     }
 }
