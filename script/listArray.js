@@ -45,17 +45,17 @@ let listArray = [
         plike: false
     },  {
         pid:6,
-        pName:"상품명-7",
-        pDesc: "상품 관련 간단한 설명",
-        pPrice:3000,
-        pThumbnail:"list-1-img.jpg", 
+        pName:"영양 강화 프리믹스",
+        pDesc: "반려동물의 일일 필수 영양소를 담은 프리미엄 영양 보충제",
+        pPrice:15000,
+        pThumbnail:"list-dog-2-1.png", 
         plike: false
     },  {
         pid:7,
-        pName:"상품명-8",
-        pDesc: "상품 관련 간단한 설명",
-        pPrice:3000,
-        pThumbnail:"list-1-img.jpg", 
+        pName:"칠면조 야채 스튜",
+        pDesc: "저지방 칠면조와 시즈널 야채를 담백하게 조리한 웰니스 식사",
+        pPrice:5500,
+        pThumbnail:"list-dog-2-2.png", 
         plike: false
     },
 ]

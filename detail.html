@@ -14,6 +14,7 @@
     <script src="./script/header.js"></script>
     <script src="./script/heart.js"></script>
     <script src="./script/toWon.js"></script>
+    <script src="./script/getParam.js"></script>
 
     <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
@@ -22,6 +23,9 @@
     <script src="./script/listArray.js"></script>
     <script src="./script/detail-recomand.js"></script>
     <link rel="stylesheet" href="./style/detail.css">
+    <script src="./script/detail.js"></script>
+    
+
 </head>
 <body>
     <!-- 스마트 기기에서 보이는 메뉴 -->
@@ -205,7 +209,7 @@
 
     <main>
         <div class="product1">
-            <div class="common-frame">
+            <!-- <div class="common-frame">
                 <figure class="img-pro-thumb">
                     <img src="./img/list-dog-1-1.png" alt="상품 썸네일 이미지">
                 </figure>
@@ -246,19 +250,19 @@
                         <li><a href="#">구매하기</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="common-frame sticky-menu-wrap">
             <ul class="sticky-menu">
-                <li><a href="#">많이 찾는 제품</a></li>
-                <li><a href="#">영양성분</a></li>
-                <li><a href="#">리뷰</a></li>
+                <li><a href="#point1">많이 찾는 제품</a></li>
+                <li><a href="#point2">영양성분</a></li>
+                <li><a href="#point3">리뷰</a></li>
             </ul>
         </div>
 
         <div class="recomd-product">
             <div class="common-frame">
-                <h2>많이 찾는 제품</h2>
+                <h2 id="point1">많이 찾는 제품</h2>
                 <ul class="list-grid">
                 </ul>
             </div>
@@ -266,7 +270,7 @@
 
         <div class="nutri">
             <div class="common-frame">
-                <h2>영양성분</h2>
+                <h2 id="point2">영양성분</h2>
                 <div class="nutri-inner">
                     <div class="nutri1">
                         <h3>그레인프리 데일리 사료</h3>
@@ -315,7 +319,7 @@
 
         <div class="review">
             <div class="common-frame">
-                <h2>리뷰</h2>
+                <h2 id="point3">리뷰</h2>
                 <div class="review-wrap">
                     <div class="rev-con">
                         <div class="rev-user-info">

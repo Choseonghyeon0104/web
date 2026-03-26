@@ -1,6 +1,7 @@
 html{
     font-family: 'Pretendard',sans-serif;
     font-size:var(--basic-font-pc);
+    scroll-behavior: smooth;
 }
 main{
     min-height: 60vh;
