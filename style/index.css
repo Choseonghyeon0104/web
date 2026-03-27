@@ -113,7 +113,17 @@
     transition: all 0.5s ease 0s;
 }
 .signature-menu-slider figure img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+.menu-frame.best figure{
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.menu-frame.best figure img{
+    transition: all 0.5s ease 0s;
+}
+.menu-frame.best figure img:hover{
+    transform: scale(1.1);
 }
 .menu-frame{
     margin-bottom: var(--space-3x-large);
