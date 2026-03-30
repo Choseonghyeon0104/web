@@ -1,0 +1,15 @@
+.sub-banner{
+    /* border:1px solid red; */
+    height: 400px;
+    background: url(../img/bg-list-2.jpg) no-repeat 50% 25% / cover;
+}
+@media (max-width:1440px){
+    .sub-banner{
+        height: 500px;
+    }
+}
+@media (max-width:768px){
+    .sub-banner{
+        height: 600px;
+    }
+}

@@ -168,24 +168,30 @@ header .sns li{
         gap: 0;
     }
     .gnb-smart>li{
-        /* border: 1px solid blue; */
-        max-height: 40px;
         overflow: hidden;
         position: relative;
         transition: all 0.5s ease 0s;
+        min-height: 40px;
     }
-    .gnb-smart>li.on{
-        max-height: 300px;
-    
+    .gnb-smart>li>ul{
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease 0s;
+    }
+    .gnb-smart>li.on>ul{
+        max-height: 460px;
+        opacity: 1;
+        margin-top: 0.5rem;
+        gap: 0.5rem;
     }
     .gnb-smart>li .btn-more img{
-        transition: all 0.5s ease 0s;
+        transition: all 0.3s ease 0s;
     }
     .gnb-smart>li.on .btn-more img{
         transform: rotate(-90deg);
     }
     .gnb-smart>li>a{
-        box-sizing: border-box;
         display: flex;
         height: 40px;
         align-items: center;

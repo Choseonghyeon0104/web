@@ -7,7 +7,7 @@ async function includeHTML(selector, url, callback) {
         if (resp.ok) {
             el.innerHTML = await resp.text();
             if(callback) callback();
-            header()
+            
         }
     } catch (error) {
         console.error('Error loading HTML:', error);
@@ -16,6 +16,6 @@ async function includeHTML(selector, url, callback) {
 
 // DOMContentLoaded 이벤트에서 헤더 로드
 document.addEventListener('DOMContentLoaded', () => {
-    includeHTML('#include-header', './header.html');
+    includeHTML('#include-header', './header.html',header);
     includeHTML(`#include-footer`,`./footer.html`)
 });
