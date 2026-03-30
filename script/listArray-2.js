@@ -1,61 +1,62 @@
-let listArray = [
+const catProducts = [
     {
         pid:0,
-        pName:"그레인프리 데일리 사료",
-        pDesc: "곡물 알러지를 최소화하고 매일 급여해도 질리지 않는 균형 잡힌 주식",
-        pPrice:28000,
-        pThumbnail:"list-dog-1-1.png", //파일명 규칙있는 이름으로 설정하기, 예를 들어 list-ooo-ooo.jpg
+        pName:"참치&닭가슴살 그레인프리 캔",
+        pDesc: "곡물 없이 신선한 원육으로만 채워 알러지 걱정 없는 주식",
+        pPrice:2800,
+        pThumbnail:"list-cat-1-1.png", //파일명 규칙있는 이름으로 설정하기, 예를 들어 list-ooo-ooo.jpg
         plike: false
     },
   {
         pid:1,
-        pName:"소고기 채소 듬뿍 화식",
-        pDesc: "고단백 소고기와 신선한 파프리카, 브로콜리를 다져 넣은 촉촉한 한 끼",
-        pPrice:4500,
-        pThumbnail:"list-dog-1-2.png", 
+        pName:"오리&단호박 무스",
+        pDesc: "음수량이 부족한 고양이를 위해 수분 함량을 높인 부드러운 제형",
+        pPrice:2500,
+        pThumbnail:"list-cat-1-2.png", 
         plike: false
     },  
     {
         pid:2,
-        pName:"연어 고구마 무스 화식",
-        pDesc: "피모 건강에 좋은 연어와 달콤한 고구마를 으깨어 만든 부드러운 식사",
-        pPrice:4200,
-        pThumbnail:"list-dog-1-3.png", 
+        pName:"프리미엄 연어 키틴 사료",
+        pDesc: "어린 고양이를 위한 고단백 연어 베이스의 성장기 전용 사료",
+        pPrice:32000,
+        pThumbnail:"list-cat-1-3.png", 
         plike: false
     },  {
         pid:3,
-        pName:"오븐 베이크드 치킨 사료",
-        pDesc: "낮은 온도에서 천천히 구워 영양소 파괴를 최소화한 바삭한 건식 사료",
-        pPrice:22000,
-        pThumbnail:"list-dog-1-4.png", 
+        pName:"비프&리버 파테",
+        pDesc: "철분이 풍부한 소고기와 간을 곱게 갈아 풍미를 살린 촉촉한 파테",
+        pPrice:3000,
+        pThumbnail:"list-cat-1-4.png", 
         plike: false
     },  {
         pid:4,
-        pName:"오리 안심 영양 화식",
-        pDesc: "기력 회복에 좋은 오리 안심과 단호박을 섞어 기호성을 높인 화식",
-        pPrice:4800,
-        pThumbnail:"list-dog-1-5.png", 
+        pName:"흰살생선&야채 스튜",
+        pDesc: "엄선된 흰살생선과 야채를 푹 끓여내 기호성이 뛰어난 보양식",
+        pPrice:2900,
+        pThumbnail:"list-cat-1-5.png", 
         plike: false
     },  {
         pid:5,
-        pName:"양고기 허브 테린",
+        pName:"7세 이상 고양이의 신장 건강을 고려한 맞춤형 건식 사료",
         pDesc: "호주산 양고기와 로즈마리 향이 어우러진 고급스러운 육류 테린",
-        pPrice:5200,
-        pThumbnail:"list-dog-1-6.png", 
+        pPrice:30000,
+        pThumbnail:"list-cat-1-6.png", 
         plike: false
     },  {
         pid:6,
-        pName:"동결건조 연어 트릿",
-        pDesc: "신선한 연어를 급속 동결시켜 영양과 풍미를 그대로 살린 건강 간식",
-        pPrice:12000,
-        pThumbnail:"list-dog-2-1.png", 
+        pName:"펠라인 프리미엄 캣 트릿",
+        pDesc: "고양이들이 열광하는 최상급 원재료로 만든 시그니처 트릿 간식",
+        pPrice:11000,
+        pThumbnail:"list-cat-2-1.png", 
         plike: false
     },  {
         pid:7,
-        pName:"한입 쏙 닭가슴살 육포",
-        pDesc: "무항생제 닭가슴살을 그대로 말려 기호성이 뛰어난 스테디셀러",
-        pPrice:5500,
-        pThumbnail:"list-dog-2-2.png", 
+        pName:"몽글 츄르 (대구&가리비)",
+        pDesc: "신선한 대구살과 가리비를 갈아 만든 마성의 액상 간식",
+        pPrice:3000,
+        pThumbnail:"list-cat-2-2.png", 
         plike: false
     },
 ]
+window.catProducts = catProducts;

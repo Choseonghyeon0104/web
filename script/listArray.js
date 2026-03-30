@@ -1,4 +1,4 @@
-let listArray = [
+const dogProducts = [
     {
         pid:0,
         pName:"그레인프리 데일리 사료",
@@ -59,3 +59,5 @@ let listArray = [
         plike: false
     },
 ]
+window.dogProducts = dogProducts;
+window.listArray = dogProducts;

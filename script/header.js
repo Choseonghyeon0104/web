@@ -17,7 +17,8 @@ function header(){
     //모바일에서 2뎁스 메뉴 나오는 기능
     const btnMore = document.querySelectorAll(`.gnb-smart .btn-more`)
     btnMore.forEach((span,i)=>{
-        span.addEventListener("click",()=>{
+        span.addEventListener("click",(e)=>{
+            e.preventDefault(); // 기본 동작 방지 (링크 이동 등)
             span.parentElement.classList.toggle(`on`)
         })
     })

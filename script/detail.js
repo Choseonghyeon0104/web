@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded",()=>{
     
-    let productId = getParam("pid")
-    const result = listArray.find(item=>item.pid == productId)
-    // find함수는 앞의 listArray 라는 배열의 여러 원소들은 전부 조사하여 원소 중 pid 키 값이 현재 productId 변수에 저장된 수와 일치되는 원소를 리턴하여 result라는 변수에 저장한다.
-    console.log(result)
+    const productId = getParam("pid")
+    const type = getParam("type") || 'dog'
+    let dataSource = window.listArray || []
+    if(type === 'cat') dataSource = window.catProducts || dataSource
+    else dataSource = window.dogProducts || dataSource
+    const result = dataSource.find(item => String(item.pid) === String(productId))
+    // find함수는 배열에서 pid 값이 productId와 같은 원소를 찾아서 리턴합니다.
+    console.log({type, productId, result})
 
+    if(!result){
+        document.querySelector('.product1').innerHTML = '<p>찾을 수 없는 상품입니다.</p>'
+        return
+    }
 
     const product1 = document.querySelector(".product1")
     product1.innerHTML = `
