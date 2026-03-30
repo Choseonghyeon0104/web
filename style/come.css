@@ -69,6 +69,29 @@
     margin-bottom: var(--space-x-large);
     text-align: center;
 }
+.come1 dt{
+    font-size: var(--fs-bd1);
+    font-weight: var(--fw-bold);
+}
+
+.come2-list{
+    display: flex;
+    gap: var(--space-normal);
+}
+
+.come2-list li{
+    flex: 1;
+    background-color: #F7F7F7;
+    padding: var(--space-normal) var(--space-normal) var(--space-large);
+    border-radius: 0.75rem;
+}
+.come2-list h5{
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.5rem;
+}
+.come2{
+    margin-bottom: var(--space-3x-large);
+}
 
 @media(max-width:1440px){
     .sub-banner{
@@ -93,6 +116,9 @@
         flex-direction: column;
     }
     .map{
-    aspect-ratio: 375/300;
-}
+        aspect-ratio: 375/300;
+    }
+    .come2-list{
+        flex-direction: column;
+    }
 }
