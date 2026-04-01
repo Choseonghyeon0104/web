@@ -1,0 +1,109 @@
+.sub-banner{
+    height: 400px;
+    background: url(../img/sub-banner-event.jpg) no-repeat 50% 50% / cover;
+}
+.sub-banner .common-frame{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.event1{
+    margin: var(--space-3x-large) 0;
+}
+.event1 h3{
+    text-align: center;
+    margin-bottom: var(--space-small);
+}
+.event1 h3+p{
+    text-align: center;
+    margin-bottom: var(--space-large);
+}
+.event1-content{
+    display: flex;
+    gap: 142px;
+}
+.event1-img-slider{
+    width: 710px;
+}
+.event1-txt-slider{
+    width: 588px;
+}
+.event1-txt-slider .swiper-slide{
+    /* 이거 지울 수도 있음 */
+    background-color: #fff;
+    height: 100%;
+}
+.event1-txt-slider h4{
+    margin-top: var(--space-normal);
+    margin-bottom: var(--space-small);
+}
+.event1-txt-slider h4+p{
+    margin-bottom: var(--space-2x-large,4rem);
+}
+
+.event2 h3{
+    text-align: center;
+    margin-bottom: var(--space-large);
+}
+.event2{
+    margin-bottom: var(--space-3x-large);
+}
+.event-grid{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(50px,1fr));
+    gap:  var(--space-large) var(--space-normal);
+}
+.event-grid figure{
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: var(--space-large);
+}
+.event-grid h4{
+    margin-bottom: var(--space-small);
+}
+.event-grid figure img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media(max-width:1440px){
+    .sub-banner{
+        height: 500px;
+    }
+    .event1-content{
+        gap: var(--space-normal);
+    }
+    .event1-img-slider{
+        width: calc((100% - 1rem)/2);
+    }
+    .event1-txt-slider{
+        width: calc((100% - 1rem)/2);
+    }
+
+}
+@media(max-width:768px){
+    .sub-banner{
+        height: 600px;
+        text-align: center;
+    }
+    .event1-content{
+        flex-direction: column;
+        gap: var(--space-large);
+    }
+    .event1-img-slider{
+        width: 100%;
+    }
+    .event1-txt-slider{
+        width: 100%;
+    }
+    .event1-txt-slider h4+p{
+       margin-bottom: var(--space-large,2rem);
+    }
+    .event-grid{
+        grid-template-columns: repeat(2,minmax(50px,1fr));
+        gap:  var(--space-x-large) var(--space-normal);
+    }
+}
